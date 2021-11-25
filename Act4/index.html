@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Actividad 2.5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        
+        <form style="justify-content: center; display: inline-block; align-items: center; background: grey; padding: 5px" action="form.php" method="post">
+            <div style="text-align: center">
+
+                <p>Nombre <input type="text" name="nombre"/></p>
+                <p>Apellido1 <input type="text" name="surname1"/></p>
+                <p>Apellido2 <input type="text" name="surname2"/></p>
+                <p>Fecha de Nacimiento <input type="date" name="date"/></p>
+                <p>Provincia <select name="province">
+                        <option value="Sevilla">Sevilla</option> 
+                        <option value="Huelva">Huelva</option> 
+                        <option value="Cadiz">Cádiz</option>
+                        <option value="Cordoba">Cordoba</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Malaga">Málaga</option>
+                        <option value="Jaen">Jaen</option>
+                        <option value="Almeria">Almería</option>
+
+                    </select></p>
+
+                <p>Titulación <select name="title" id="title">
+                        <option value="4">Ingeniero Técnico</option> 
+                        <option value="2">Formación Profesional</option>
+                        <option value="5">Grado</option>
+                        <option value="8">Ingeniero Superior</option>
+                    </select>
+                </p>
+
+                <p>Título de Doctor <input type="radio" name="doctor" value = "1"/></p>
+
+                <p>Más de una titulación universitaria <input type="radio" name="college" value= "2"/></p>
+
+                <p>Calificación <input type="text" name="cualification"/></p>
+
+                <p>Fecha inicio<input type="date" name="fInicio" id="f_start"/></p>
+                <p>Fecha fin<input type="date" name="fFin" id="f_end"/></p>
+                <input type="submit" name="button1"/>
+            <div/>
+        </form>
+        
+        <!-- JS -->
+        <script>
+
+            let title = document.getElementById('title');
+            let f_start = document.getElementById('f_start');
+            let f_end = document.getElementById('f_end');
+
+            title.addEventListener('change', (event) => {
+                let value = event.target.value;
+
+                if(value == 2){
+                    f_start.disabled = true;
+                    f_end.disabled = true;
+
+                }else{
+                    f_start.disabled = false;
+                    f_end.disabled = false;
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
