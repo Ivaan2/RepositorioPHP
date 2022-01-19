@@ -1,0 +1,31 @@
+<html>
+    <head lang="es">
+        <meta charset="utf-8">
+        <title>Conexion a PhpMyAdmin</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body style="background-color: darkslategrey;">
+        <h1 id="titulo">Formulario</h1>
+
+        <form style="background-color: rgba(98, 138, 146, 0.699); margin-left: 250px; margin-right: 250px;" action="form.php" method="POST">
+            <div style="margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;">
+                <p>Nombre: <input type="text"/></p>
+                <p>Apellidos: <input type="text"/></p>
+                <p>DNI: <input type="text"/></p>
+                <p>Estudios 
+                    <select name="estudios">
+                        <option value="1">Desarrollo de Aplicaciones Multiplataforma</option>
+                        <option value="2">Desarrollo de Aplicaciones Web</option>
+                        <option value="3">Administración de Sistemas y Redes</option>
+                    </select>    
+                </p>
+                <p>Nota: <input type="number"/></p>
+                <input type="submit" name="button1"/>
+            </div>
+        </form>
+    </body>
+</html>
