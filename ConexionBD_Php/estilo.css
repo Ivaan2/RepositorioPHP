@@ -1,0 +1,12 @@
+#titulo{
+    text-align: center;
+    margin: 15px;
+    background-color: rgb(44, 92, 81);
+    align-items: center;
+    color: rgb(206, 140, 54);
+    border-style: solid;
+}
+
+input[name=button1]{
+    margin: 10px;
+}
